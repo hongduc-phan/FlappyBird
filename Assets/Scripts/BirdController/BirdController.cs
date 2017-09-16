@@ -53,6 +53,12 @@ public class BirdController : MonoBehaviour {
 
     void _BirdMovement()
     {
+	    
+	if(Input.GetMouseButtonDown(0))
+        {
+            myBody.velocity = new Vector2(myBody.velocity.x, bounceForce);
+        }
+	    
         if(isAlive)
         {
             if(didFlap)
